@@ -9,36 +9,57 @@ public class PlayerShoot : MonoBehaviour
     public Transform FirePosition;
     public float projectileSpeed = 30f;
 
+    public Animator StringOne;
+    public Animator StringTwo;
+    public Animator Handle;
+
+    private float fireSpeed = 1.5f;
+    private float lastShot = 0.0f;
+    private float shotDelay = .5f;
+
     private Vector3 destination;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Time.time > (lastShot + fireSpeed) && Input.GetButtonDown("Fire1"))
         {
+            lastShot = Time.time;
+            Debug.Log("Fire In the hole");
+            
             ShootProjectile();
+
         }
-        
+
     }
 
     void ShootProjectile()
     {
-        Ray ray = camera1.ViewportPointToRay(new Vector3(.5f, .5f, 0));
-        RaycastHit hit;
+        StartCoroutine(FireAnimation());
+        
+ 
 
-        if(Physics.Raycast(ray, out hit))
-        {
-            destination = hit.point;
-        }
-        else
-        {
-            destination = ray.GetPoint(1000);
-        }
+
+    }
+
+    IEnumerator FireAnimation()
+    {
+
+        Debug.Log("Animation Played");
+        StringOne.SetBool("Fire", true);
+        StringTwo.SetBool("Fire", true);
+        Handle.SetBool("Fire", true);
+
+        yield return new WaitForSeconds(shotDelay);
+
+        StringOne.SetBool("Fire", false);
+        StringTwo.SetBool("Fire", false);
+        Handle.SetBool("Fire", false);
         Instantiate(projectile, FirePosition.position, FirePosition.rotation);
     }
     /*
@@ -48,4 +69,7 @@ public class PlayerShoot : MonoBehaviour
         //projectileObj.GetComponent<Rigidbody>().velocity = (destination - firePoint.position).normalized * projectileSpeed;
     }
     */
+
+
+
 }

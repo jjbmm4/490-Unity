@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637510258026121806
+      ticks: 637511134074390803
     m_Hash: 2886667296
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -428,6 +428,7 @@ m_PackageAssets:
         - 4.5.0
         - 5.0.0-pre.7
         - 5.0.0-pre.10
+        - 5.0.1
         compatible:
         - 4.0.2
         - 4.0.3
@@ -454,6 +455,7 @@ m_PackageAssets:
         - 4.5.0
         - 5.0.0-pre.7
         - 5.0.0-pre.10
+        - 5.0.1
         verified: 4.5.0
       dependencies:
       - name: com.unity.settings-manager
@@ -965,7 +967,9 @@ m_PackageAssets:
         - 1.5.1-pre.2
         - 1.5.1-pre.3
         - 1.5.2
+        - 1.5.4
         - 1.6.0-pre.1
+        - 1.6.0-pre.3
         compatible:
         - 1.4.6
         - 1.5.0-pre.2
@@ -978,7 +982,9 @@ m_PackageAssets:
         - 1.5.1-pre.2
         - 1.5.1-pre.3
         - 1.5.2
+        - 1.5.4
         - 1.6.0-pre.1
+        - 1.6.0-pre.3
         verified: 1.4.6
       dependencies:
       - name: com.unity.modules.director
