@@ -21,7 +21,7 @@ public class StartButton : MonoBehaviour
         if (triggering)
         {
 
-            interactText.gameObject.SetActive(true);
+            
             if (Input.GetKeyDown(KeyCode.E))
             {
                 interactText.gameObject.SetActive(false);
@@ -32,7 +32,7 @@ public class StartButton : MonoBehaviour
         }
         else
         {
-            interactText.gameObject.SetActive(false);
+            
         }
         
     }
@@ -40,7 +40,7 @@ public class StartButton : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-
+            interactText.gameObject.SetActive(true);
             triggering = true;
 
         }
@@ -52,6 +52,7 @@ public class StartButton : MonoBehaviour
         {
 
             triggering = false;
+            interactText.gameObject.SetActive(false);
         }
     }
 }

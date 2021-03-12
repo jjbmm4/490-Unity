@@ -13,6 +13,7 @@ public class TargetManager : MonoBehaviour
     public int leftBound;
     public int rightBound;
     public float speed;
+    public int score = 1;
 
     private float xPos;
     private float yPos;
@@ -68,7 +69,7 @@ public class TargetManager : MonoBehaviour
 
     IEnumerator resetTarget()
     {
-        scoreManager.GetComponent<ScoreManager>().score += 1;
+        scoreManager.GetComponent<ScoreManager>().score += score;
         yield return new WaitForSeconds(2f);
         targetAnimation.SetBool("IsAlive", true);
     }

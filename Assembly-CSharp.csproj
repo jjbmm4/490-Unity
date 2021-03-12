@@ -56,14 +56,15 @@
     <Compile Include="Assets\Scripts\ShootingRangeScripts\ProjectileForward.cs" />
     <Compile Include="Assets\Scripts\FacePlayer.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\ShootingRangeScripts\ScoreManager.cs" />
+    <Compile Include="Assets\Scripts\ShootingRangeScripts\StartButton.cs" />
     <Compile Include="Assets\Scripts\ShootingRangeScripts\TargetManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\ShootingRangeScripts\PlayerShoot.cs" />
     <Compile Include="Assets\Scripts\DialogueScripts\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\DialogueScripts\Dialogue.cs" />
     <Compile Include="Assets\Scripts\DialogueScripts\DialogueManager.cs" />
-    <Compile Include="Assets\Scripts\ShootingRangeScripts\ScoreManager.cs" />
-    <Compile Include="Assets\Scripts\ShootingRangeScripts\StartButton.cs" />
+    <Compile Include="Assets\Scripts\MazeScripts\LeverScript.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
