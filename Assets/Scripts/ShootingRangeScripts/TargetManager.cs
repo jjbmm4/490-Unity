@@ -8,6 +8,7 @@ public class TargetManager : MonoBehaviour
     public Animator targetAnimation;
     public GameObject scoreManager;
     public GameObject TargetPosition;
+    public ParticleSystem powParticle;
     
 
     public int leftBound;
@@ -60,6 +61,7 @@ public class TargetManager : MonoBehaviour
         {
             if (scoreManager.GetComponent<ScoreManager>().isGameActive && targetAnimation.GetBool("IsAlive"))
             {
+                powParticle.Play();
                 targetAnimation.SetBool("IsAlive", false);
                 StartCoroutine(resetTarget());
 
