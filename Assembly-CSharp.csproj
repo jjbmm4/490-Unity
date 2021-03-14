@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\DialogueScripts\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\DialogueScripts\Dialogue.cs" />
     <Compile Include="Assets\Scripts\DialogueScripts\DialogueManager.cs" />
+    <Compile Include="Assets\Scripts\MazeScripts\ParticleScript.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -708,6 +709,9 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
