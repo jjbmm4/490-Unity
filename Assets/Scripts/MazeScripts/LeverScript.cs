@@ -9,6 +9,7 @@ public class LeverScript : MonoBehaviour
     public List<Animator> gateAnimators;
     public Animator leverAnimator;
     public TextMeshProUGUI interactText;
+    public ParticleSystem[] dustParticles;
     private bool triggering;
     private bool leverFlipped = false;
     // Start is called before the first frame update
@@ -30,6 +31,10 @@ public class LeverScript : MonoBehaviour
                 {
                     leverFlipped = false;
                     leverAnimator.SetBool("IsFlicked", true);
+                    foreach(ParticleSystem particle in dustParticles)
+					{
+                        particle.Play();
+					}
                     foreach (Animator gate in gateAnimators)
                     {
                         gate.SetBool("IsOpen", true);
