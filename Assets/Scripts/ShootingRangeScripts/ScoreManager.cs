@@ -8,6 +8,8 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
+    public GameObject brother1;
+    public GameObject key;
 
 
     public bool isGameActive;
@@ -37,6 +39,7 @@ public class ScoreManager : MonoBehaviour
 
     IEnumerator win()
     {
+        key.SetActive(true);
         scoreText.text = "YOU WIN!!!1!";
         yield return new WaitForSeconds(2f);
         scoreText.gameObject.SetActive(false);
